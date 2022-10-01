@@ -13,4 +13,15 @@ public class HelpfulTypeSystemTests
         
         book.ShouldBeOfType<Book>();
     }
+
+    [Fact]
+    public void Tuple_can_replace_multiple_and_comparison()
+    {
+        var a = 10;
+        var b = 20;
+        var x = 10;
+        var y = 20;
+        
+        ((a, b) == (x, y)).ShouldBeTrue();
+    }
 }
